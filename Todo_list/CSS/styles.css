@@ -1,0 +1,182 @@
+:root {
+    /* Cores principais - Neon harmonizado com branco */
+    --cor-primaria: #7f00ff;         
+    --cor-secundaria: #ffffff;       
+    --cor-texto: #000000;            
+    --cor-texto-suave: #555;         
+    --cor-borda: #252b2b;            
+    --cor-borda-suave: #7837f1;      
+    --cor-fundo-done: #ff0055;       
+    /* Tipografia */
+    --fonte-principal: Helvetica;
+  
+    /* Espaçamento */
+    --padding-btn: 0.3rem 0.6rem;
+    --padding-input: 0.25rem 0.5rem;
+    --padding-container: 1.5rem;
+    --border-radius: 15px;
+  }
+
+  html {
+    height: 100vh;
+  }
+  /* Geral */
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+  }
+  
+  body {
+    background-image: url("../img/bg.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  
+  button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    border: 2px solid var(--cor-primaria);
+    padding: var(--padding-btn);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+  }
+  
+  button:hover {
+    background-color: var(--cor-primaria);
+  }
+  
+  button:hover > i {
+    color: #fff;
+  }
+  
+  button i {
+    pointer-events: none;
+    color: var(--cor-primaria);
+    font-weight: bold;
+  }
+  
+  input,
+  select {
+    padding: var(--padding-input);
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  /* Todo Header */
+  .todo-container {
+    max-width: 450px;
+    margin: 3rem auto 0;
+    background-color: var(--cor-secundaria);
+    padding: var(--padding-container);
+    border-radius: var(--border-radius);
+  }
+  
+  .todo-container header {
+    text-align: center;
+    padding: 0 1rem 1rem;
+    border-bottom: 1px solid var(--cor-borda);
+  }
+  
+  /* Todo Form */
+  #todo-form,
+  #edit-form {
+    padding: 1rem;
+    border-bottom: 1px solid var(--cor-borda);
+  }
+  
+  #todo-form p,
+  #edit-form p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    display: flex;
+  }
+  
+  .form-control input {
+    margin-right: 0.3rem;
+  }
+  
+  #cancel-edit-btn {
+    margin-top: 1rem;
+    color: var(--cor-texto-suave);
+  }
+  
+  /* Todo Toolbar */
+  #toolbar {
+    padding: 1rem;
+    border-bottom: 1px solid var(--cor-borda);
+    display: flex;
+  }
+  
+  #toolbar h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  #search {
+    border-right: 1px solid var(--cor-borda-suave);
+    padding-right: 1rem;
+    margin-right: 1rem;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #search form {
+    display: flex;
+  }
+  
+  #search input {
+    width: 100%;
+    margin-right: 0.3rem;
+  }
+  
+  #filter {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #filter select {
+    flex: 1;
+  }
+  
+  /* Todo List */
+  .todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid var(--cor-borda-suave);
+    transition: 0.3s;
+  }
+  
+  .todo h3 {
+    flex: 1;
+    font-size: 0.9rem;
+  }
+  
+  .todo button {
+    margin-left: 0.4rem;
+  }
+  
+  .done {
+    background: var(--cor-fundo-done);
+  }
+  
+  .done h3 {
+    color: #fff;
+    text-decoration: line-through;
+    font-style: italic;
+  }
+  
